@@ -1,0 +1,5 @@
+1. The overlay flashes. Solution: stop indefinite block checking. 
+Don't trigger checking whenever a "TIMER_UPDATE" message come out.
+2. Blocking check every second. Solution: stop
+3. Periodic checkAndApplyBlocking is triggered in several sources.
+4. Stop periodic check for unblocked web pages after focus session.

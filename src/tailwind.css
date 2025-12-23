@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations for DeepFocus */
+@layer utilities {
+  @keyframes bounceTap {
+    0% { transform: scale(1); }
+    20% { transform: scale(0.92); }
+    50% { transform: scale(1.04); }
+    100% { transform: scale(1); }
+  }
+  .animate-bounceTap {
+    animation: bounceTap 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes ripple {
+    0% { box-shadow: 0 0 0 0 rgba(99,102,241,0.2); }
+    100% { box-shadow: 0 0 0 12px rgba(99,102,241,0); }
+  }
+  .animate-ripple:active {
+    animation: ripple 0.4s linear;
+  }
+
+  @keyframes orbFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+  }
+  .animate-orbFloat {
+    animation: orbFloat 8s ease-in-out infinite;
+  }
+
+  @keyframes orbPulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+  .animate-orbPulse {
+    animation: orbPulse 6s ease-in-out infinite;
+  }
+
+  @keyframes sectionFadeIn {
+    0% { opacity: 0; transform: translateY(24px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-sectionFadeIn {
+    animation: sectionFadeIn 0.7s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  @keyframes modalIn {
+    0% { opacity: 0; transform: scale(0.95) translateY(32px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .animate-modalIn {
+    animation: modalIn 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  @keyframes timerPulse {
+    0%, 100% { filter: drop-shadow(0 0 0px #fff); }
+    50% { filter: drop-shadow(0 0 16px #fff); }
+  }
+  .animate-timerPulse {
+    animation: timerPulse 1.2s cubic-bezier(0.4,0,0.2,1) 2;
+  }
+
+  @keyframes staggerFadeIn {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-staggerFadeIn {
+    animation: staggerFadeIn 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+} 
