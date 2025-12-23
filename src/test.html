@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepFocus ML Model Test</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 10px;
+    }
+    .test-container {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .test-item {
+      margin: 15px 0;
+      padding: 10px;
+      border-left: 4px solid #ddd;
+      background: #f9f9f9;
+    }
+    .test-item.running {
+      border-left-color: #2196F3;
+      background: #E3F2FD;
+    }
+    .test-item.pass {
+      border-left-color: #4CAF50;
+      background: #E8F5E9;
+    }
+    .test-item.fail {
+      border-left-color: #f44336;
+      background: #FFEBEE;
+    }
+    .test-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .test-result {
+      font-size: 14px;
+      color: #666;
+    }
+    .summary {
+      margin-top: 20px;
+      padding: 15px;
+      background: #E3F2FD;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .error {
+      color: #f44336;
+      background: #FFEBEE;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 10px 5px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .progress {
+      margin: 20px 0;
+      font-size: 14px;
+      color: #666;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>DeepFocus ML Embedding Test Suite</h1>
+
+  <div class="test-container">
+    <h2>Model Status</h2>
+    <div id="model-status">Initializing...</div>
+    <div class="progress" id="progress"></div>
+  </div>
+
+  <div class="test-container">
+    <h2>Controls</h2>
+    <button id="run-tests" disabled>Run All Tests</button>
+    <button id="run-semantic" disabled>Run Semantic Tests Only</button>
+    <button id="run-website" disabled>Run Website Filtering Tests</button>
+    <button id="run-perf" disabled>Run Performance Tests</button>
+  </div>
+
+  <div class="test-container">
+    <h2>Test Results</h2>
+    <div id="test-results"></div>
+    <div id="summary" class="summary" style="display: none;"></div>
+  </div>
+
+  <script type="module" src="test.js"></script>
+</body>
+</html>
