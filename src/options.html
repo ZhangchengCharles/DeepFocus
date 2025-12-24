@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DeepFocus Extension Options</title>
+  <style>
+    @keyframes orbFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+    @keyframes orbPulse {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.2; }
+    }
+    .animate-orbFloat {
+      animation: orbFloat 20s ease-in-out infinite;
+    }
+    .animate-orbPulse {
+      animation: orbPulse 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html> 
